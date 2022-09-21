@@ -89,8 +89,8 @@ func TestInvalidParallel(t *testing.T) {
 	}
 
 	for i, tt := range tests {
-		// i := i
-		// tt := tt
+		i := i
+		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 			t.Logf("i is %d, tt.name is %s", i, tt.name)

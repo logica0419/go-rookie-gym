@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/golang/mock/gomock"
+	"test/mock"
 
-	"testing/mock"
+	"github.com/golang/mock/gomock"
 )
 
 func TestDB(t *testing.T) {
