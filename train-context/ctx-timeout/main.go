@@ -9,8 +9,8 @@ import (
 func main() {
 	// HTTP Requestのtimeoutを決めたい
 	// ある処理に指定秒以上をかけられない
-	ctx, _ := context.WithTimeout(context.Background(), 2*time.Second)
-	// defer cancel()
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
 	go watch(ctx)
 	log.Println("execute ...")
 	time.Sleep(time.Second * 5)
